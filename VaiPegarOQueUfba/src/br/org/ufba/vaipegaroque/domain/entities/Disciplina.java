@@ -1,5 +1,7 @@
 package br.org.ufba.vaipegaroque.domain.entities;
 
+import java.util.ArrayList;
+
 public class Disciplina {
 	
 	private String nome;
@@ -7,13 +9,13 @@ public class Disciplina {
 	private String professor;
 	private Curso cursoAssociado;
 	private Integer cargaHoraria;
-	private List<Estudantes> vagasPreenchidas;
+	private ArrayList<Estudante> vagasPreenchidas;
 	private Integer vagas;
 	private String local;
 	private String horario;
 	
 	public Disciplina(String nome, String codigo, String professor,
-	 Curso cursoAssociado, Integer cargaHoraria, List<Estudantes> vagasPreenchidas,
+	 Curso cursoAssociado, Integer cargaHoraria, ArrayList<Estudante> vagasPreenchidas,
 	 Integer vagas,	 String local, String horario){
 		this.nome = nome;
 		this.codigo = codigo;
@@ -57,10 +59,10 @@ public class Disciplina {
 	public void setCargaHoraria(Integer cargaHoraria) {
 		this.cargaHoraria = cargaHoraria;
 	}
-	public List<Estudantes> getVagasPreenchidas() {
+	public ArrayList<Estudante> getVagasPreenchidas() {
 		return vagasPreenchidas;
 	}
-	public void setVagasPreenchidas(List<Estudantes> vagasPreenchidas) {
+	public void setVagasPreenchidas(ArrayList<Estudante> vagasPreenchidas) {
 		this.vagasPreenchidas = vagasPreenchidas;
 	}
 	public Integer getVagas() {

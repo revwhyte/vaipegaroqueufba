@@ -10,31 +10,13 @@ public class EstudanteBO {
 
 	public void cadastrarEstudante(Estudante e) throws Exception {
 		if(e.equals(null)) {
-			throw new Exception();
+			throw new Exception("Parametro Estudante inválido. Valor: NULL");
+		}
+		Estudante eAux = dao.getById(e.getMatricula());
+		if(eAux != null) {
+			throw new Exception("Estudante com matricula "+ e.getMatricula()+ " já está cadastrado.");
 		}
 		dao.create(e);
 	}
-	
 }
 
-class EstudanteMapper {
-	static Estudante Map(EstudanteViewModel evm) {
-		Estudante e = new Estudante();
-		e.setLogin(evm.login);
-		e.setNome(evm.nome);
-		e.setSenha(evm.senha);
-		e.setMatricula(evm.matricula);
-		e.setIdCursoMatriculado(evm.idCursoMatriculado);
-		return e;
-	}
-	
-	static EstudanteViewModel Map(Estudante e) {
-		EstudanteViewModel evm = new EstudanteViewModel();
-		evm.login = e.getLogin();
-		evm.nome = e.getNome();
-		evm.senha = e.getSenha();
-		evm.matricula = e.getMatricula();
-		evm.idCursoMatriculado = e.getIdCursoMatriculado();
-		return evm;
-	}
-}

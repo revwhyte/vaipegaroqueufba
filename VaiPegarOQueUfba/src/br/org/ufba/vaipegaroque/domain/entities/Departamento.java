@@ -1,14 +1,16 @@
 package br.org.ufba.vaipegaroque.domain.entities;
 
+import java.util.ArrayList;
+
 public class Departamento {
 
 	private Integer Id;
 	private String nome;
-	private List<Curso> cursos;
-	private List<String> professores;
+	private ArrayList<Curso> cursos;
+	private ArrayList<String> professores;
 	
-	public Departamento(Integer Id, String nome, List<Curso> curso, List<String> professores){
-		this.Id = id;
+	public Departamento(Integer Id, String nome, ArrayList<Curso> curso, ArrayList<String> professores){
+		this.Id = Id;
 		this.nome = nome;
 		this.cursos = cursos;
 		this.professores = professores;
@@ -27,16 +29,16 @@ public class Departamento {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public List<Curso> getCursos() {
+	public ArrayList<Curso> getCursos() {
 		return cursos;
 	}
-	public void setCursos(List<Curso> cursos) {
+	public void setCursos(ArrayList<Curso> cursos) {
 		this.cursos = cursos;
 	}
-	public List<String> getProfessores() {
+	public ArrayList<String> getProfessores() {
 		return professores;
 	}
-	public void setProfessores(List<String> professores) {
+	public void setProfessores(ArrayList<String> professores) {
 		this.professores = professores;
 	}
 	

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:p="http://java.sun.com/jsf/core">
       
 	<h:head>
 		<meta charset="utf-8" />
@@ -22,7 +23,11 @@
 						<label>Matrícula: </label>
 						<h:inputText class="form-control"  type="text" required="true" value="#{cadastroBean.matricula}"/>
 						<label>Curso: </label>
-						<h:inputText class="form-control"  type="text" required="true" value="#{cadastroBean.curso}"/>
+						<!-- <h:inputText class="form-control"  type="text" required="true" value="#{cadastroBean.curso}"/>-->
+						<h:selectOneMenu value="#{cadastroBean.curso}" >
+				            <p:selectItems value="#{cadastroBean.cursos}" var="property" itemValue="#{property.codigo}"
+               itemLabel="#{property.nome}" />                                    
+				        </h:selectOneMenu> 
 						<h:commandButton value="Cadastrar" action="#{cadastroBean.submit}"/>
 					</h:panelGrid>
 				</h:form>
