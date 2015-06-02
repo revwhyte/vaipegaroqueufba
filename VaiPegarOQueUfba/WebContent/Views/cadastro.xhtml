@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+	<h:head>
+		<meta charset="utf-8" />
+		<title>Cadastro de Estudante</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+    <h:panelGrid>
+			<label>Login: </label>
+			<h:inputText required="true" value="#{cadastroBean.login}"/>
+			<label>Senha: </label>
+			<h:inputText required="true" value="#{cadastroBean.senha}"/>
+			<label>Nome: </label>
+			<h:inputText required="true" value="#{cadastroBean.nome}"/>
+			<label>Matrícula: </label>
+			<h:inputText required="true" value="#{cadastroBean.matricula}"/>
+			<label>Curso: </label>
+			<h:inputText required="true" value="#{cadastroBean.curso}"/>
+			<h:commandButton value="Cadastrar" action="#{cadastroBean.submit}"/>
+    </h:panelGrid>
+		</h:form>	
+		<p>#{cadastroBean.result}</p>
+	</h:body>
+	
+</html>
