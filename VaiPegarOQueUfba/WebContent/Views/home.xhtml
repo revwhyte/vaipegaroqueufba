@@ -3,11 +3,29 @@
       xmlns:h="http://java.sun.com/jsf/html">
 	<h:head>
 		<meta charset="utf-8" />
-		<title>Cadastro de Estudante</title>
+		<title>Vai Pegar o Que? UFBA</title>
 		<link rel="stylesheet" href="../Assets/css/bootstrap.min.css"></link>
 		<script src="../Assets/js/bootstrap.min.js"></script>
 	</h:head>
 	<h:body>
-		
+		<div class="wrapper">
+			<div class="container">
+				<div class="col-sm-6"> <!-- inserir uma possivel logo aqui
+					<img src="" /> 											-->
+				</div>
+				
+				<div class="col-sm-5">
+					<h:form>
+						<h:panelGrid>
+							<label>Login: </label>
+							<h:inputText class="form-control" type="text" required="true" value="#{loginBean.login}" />
+							<label>Senha: </label>
+							<h:inputText class="form-control" type="password" required="true" value="#{loginBean.senha}" />
+							<h:commandButton value="Login" action="#{loginBean.submit}" />
+						</h:panelGrid>
+					</h:form>
+				</div>
+			</div>			
+		</div>		
 	</h:body>
 </html>
