@@ -5,8 +5,9 @@
       
 	<h:head>
 		<meta charset="utf-8" />
-		<title>Cadastro de Estudante</title>
+		<title>Cadastro de Disciplina</title>
 		<link rel="stylesheet" href="../Assets/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="../Assets/css/stylesheet.css"></link>
 		<script src="../Assets/js/bootstrap.min.js"></script>
 	</h:head>
 	<h:body>
@@ -14,14 +15,12 @@
 			<div>
 				<h:form>
 	    			<h:panelGrid>
-						<label>Login: </label>
+						<label>Nome da disciplina: </label>
 						<h:inputText class="form-control" type="text" required="true" value="#{cadastroBean.login}"/>
-						<label>Senha: </label>
-						<h:inputText class="form-control"  type="password" required="true" value="#{cadastroBean.senha}"/>
-						<label>Nome: </label>
-						<h:inputText class="form-control"  type="text" required="true" value="#{cadastroBean.nome}"/>
-						<label>Matrícula: </label>
-						<h:inputText class="form-control"  type="text" required="true" value="#{cadastroBean.matricula}"/>
+						<label>Código da disciplina: </label>
+						<h:inputText class="form-control" type="password" required="true" value="#{cadastroBean.senha}"/>
+						<label>Professor responsável: </label>
+						<h:inputText class="form-control" type="text" required="true" value="#{cadastroBean.nome}"/>
 						<label>Curso: </label>
 						<!-- <h:inputText class="form-control"  type="text" required="true" value="#{cadastroBean.curso}"/>-->
 						<h:selectOneMenu value="#{cadastroBean.curso}" >
