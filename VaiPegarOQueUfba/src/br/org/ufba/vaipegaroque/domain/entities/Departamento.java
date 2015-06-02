@@ -12,7 +12,7 @@ public class Departamento {
 	public Departamento(Integer Id, String nome, ArrayList<Curso> curso, ArrayList<String> professores){
 		this.Id = Id;
 		this.nome = nome;
-		this.cursos = cursos;
+		this.cursos = curso;
 		this.professores = professores;
 	}
 	

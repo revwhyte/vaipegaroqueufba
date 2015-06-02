@@ -6,6 +6,13 @@ import br.org.ufba.vaipegaroque.domain.entities.Estudante;
 
 public class EstudanteDAO extends BaseDAO<Estudante, Integer> {
 
+	public Estudante getBy(String login, String senha) {
+		Estudante e = null;
+		// Permite sql injection
+		String sql = "SELECT * FROM estudantes WHERE LOGIN = " + login + " AND " + "SENHA = " + senha + ";";
+		return e;
+	}
+	
 	@Override
 	public void create(Estudante e) {
 		

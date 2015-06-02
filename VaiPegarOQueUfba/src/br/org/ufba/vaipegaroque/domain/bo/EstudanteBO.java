@@ -18,5 +18,17 @@ public class EstudanteBO {
 		}
 		dao.create(e);
 	}
+	
+	//Autenticação fraca
+	public boolean autenticarEstudante(Estudante e) throws Exception {
+		if(e.equals(null)) {
+			throw new Exception("Parametro Estudante inválido. Valor: NULL");
+		}
+		Estudante eAux = dao.getById(e.getMatricula());
+		if(eAux != null) {
+			return eAux.getLogin().equals(e.getLogin()) && eAux.getSenha().equals(e.getSenha());
+		}
+		return false;
+	}
 }
 
